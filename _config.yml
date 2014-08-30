@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://ilanasufrin.github.io/
+title: Ilana's Blog
+subtitle: My personal tech blog
+author: Ilana Sufrin
 simple_search: https://www.google.com/search
-description:
+description: Ilana also blogs for the Huffington Post but some posts don't belong there...
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
