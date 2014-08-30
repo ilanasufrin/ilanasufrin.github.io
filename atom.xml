@@ -4,7 +4,7 @@
   <title><![CDATA[Ilana's Blog]]></title>
   <link href="http://ilanasufrin.github.io/atom.xml" rel="self"/>
   <link href="http://ilanasufrin.github.io/"/>
-  <updated>2014-08-30T00:50:04-04:00</updated>
+  <updated>2014-08-30T00:54:52-04:00</updated>
   <id>http://ilanasufrin.github.io/</id>
   <author>
     <name><![CDATA[Ilana Sufrin]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[My First Post on Octopress]]></title>
+    <title type="html"><![CDATA[My First Post On Octopress]]></title>
     <link href="http://ilanasufrin.github.io/blog/2014/08/30/my-first-post-on-octopress/"/>
     <updated>2014-08-30T00:48:32-04:00</updated>
     <id>http://ilanasufrin.github.io/blog/2014/08/30/my-first-post-on-octopress</id>

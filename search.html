@@ -3,10 +3,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Blog Archives - Ilana&#8217;s Blog</title>
+	<title>Ilana&#8217;s Blog</title>
     <meta name="author" content="Ilana Sufrin">
     
-	<meta name="description" content=" 2014 My First Post on Octopress Aug 30 setup,, test ">
+	<meta name="description" content="Search Results ">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,28 +78,21 @@
 <div id="toload">
 <!-- begin toload --> 
     <div id="content" class="inner">
-        
-	
+        <h1 class="entry-title"><center>Search Results</center></h1>
+<div id="search_loading" style="margin: 40px 0">
+    <center><img src="/images/loading.gif"></center>
+</div>
 
-
-	
-	
-	<section class="archives"><h1 class="year">2014</h1>
-
-<article>
-  <h2 class="title"><a href="/blog/2014/08/30/my-first-post-on-octopress/">My First Post on Octopress</a></h2>
-	<div class="meta">
-		<span class="date">Aug 30</span>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/setup/'>setup,</a>, <a class='category' href='/blog/categories/test/'>test</a>
-
-
-</span>
-	    
-	</div>
-</article>
+<script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
+<div id="search_results" style="display:none">
+<br>
+</div>
+<script>
+         $('#search_results').tapir({
+             'token': '',
+             'complete' : function() { document.getElementById('search_loading').style.display="none"; }
+         });
+</script>
 
 
     </div>
