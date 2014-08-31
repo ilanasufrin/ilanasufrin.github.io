@@ -3,10 +3,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Ilana&#8217;s Blog</title>
+	<title>Take Web Scraping Further with Mechanize - Ilana&#8217;s Blog</title>
     <meta name="author" content="Ilana Sufrin">
     
-	<meta name="description" content="Published on: Tags: Recently, the class learned how to use Nokogiri to scrape webpages. A quick Google search reveals that this is indeed the most &hellip;">
+	<meta name="description" content="Recently, the class learned how to use Nokogiri to scrape webpages. A quick Google search reveals that this is indeed the most popular web scraping &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,36 +78,9 @@
 <div id="toload">
 <!-- begin toload --> 
     <div id="content" class="inner">
-        
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/08/31/take-web-scraping-further-with-mechanize/">
-		
-			Take Web Scraping Further With Mechanize</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-31T16:09:57-04:00" pubdate data-updated="true"></time></div>
-      <div class="tags">Tags: 
-
-</div>
-    </div>
-		<p>Recently, the class learned how to use Nokogiri to scrape webpages. A quick Google search reveals that this is indeed the most popular web scraping gem. But many people combine Nokogiri with another gem, <a href="https://rubygems.org/gems/mechanize">Mechanize</a>, to extend its functionality by automating some of the work of clicking the &ldquo;next&rdquo; button or creating profiles. This post is a quick writeup of my experiences with Mechanize. Please note that I ended up using Mechanize&nbsp;<em>instead</em> of Nokogiri, not in conjunction with it. This made parsing my html way more complicated than it had to be.</p>
+        <article class="post">
+	<h2 class="title">Take Web Scraping Further With Mechanize</h2>
+	<div class="entry-content"><p>Recently, the class learned how to use Nokogiri to scrape webpages. A quick Google search reveals that this is indeed the most popular web scraping gem. But many people combine Nokogiri with another gem, <a href="https://rubygems.org/gems/mechanize">Mechanize</a>, to extend its functionality by automating some of the work of clicking the &ldquo;next&rdquo; button or creating profiles. This post is a quick writeup of my experiences with Mechanize. Please note that I ended up using Mechanize&nbsp;<em>instead</em> of Nokogiri, not in conjunction with it. This made parsing my html way more complicated than it had to be.</p>
 
 <p>I followed a few different tutorials to do it, including&nbsp;<a href="http://www.icicletech.com/blog/web-scraping-with-ruby-using-mechanize-and-nokogiri-gems">this</a>&nbsp;and <a href="http://readysteadycode.com/howto-scrape-websites-with-ruby-and-mechanize">this</a>.</p>
 
@@ -186,83 +159,26 @@ puts first_link.first.text.strip
 
 <p>Due to popular demand, I&rsquo;ve turned the subreddit generator into a gem! See:
 <a href="https://rubygems.org/gems/subreddit">https://rubygems.org/gems/subreddit</a></p>
-
-		
-		
-	</div>
+</div>
 
 <div class="meta">
 	
 </div>
 </article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/08/31/map-vs-collect/">
-		
-			Map vs Collect, and Other Ruby Synonyms</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-31T16:03:49-04:00" pubdate data-updated="true"></time></div>
-      <div class="tags">Tags: 
-
-</div>
-    </div>
-		<p>Ruby has a ton of high-level iterators. So how are you supposed to know which one to use when? More specifically, what&rsquo;s the difference between <code>map</code> and <code>collect</code>? They each produce a new array&nbsp;containing the results of the block applied to each element of the receiver. Both <code>map!</code> and <code>collect!</code> are offered to modify the array in place.</p>
-
-<p>Some sources assert that the two methods are <a href="http://rubyinrails.com/2014/01/ruby-difference-between-collect-and-map/">the same</a>. Both are array methods that can work with anything that is <a href="http://ruby-doc.org/core-2.1.2/Enumerable.htm">Enumerable</a>. Ruby is written in C, and the C-level implementation is identical. Here is that implementation:</p>
-
-<p><img src="https://31.media.tumblr.com/58cacab14980d9cb6fcdf6a4fc410c2f/tumblr_inline_n7ba2wiZs51si9gc8.png" alt="image" /></p>
-
-<p>But then why have both?&nbsp;</p>
-
-<p>Wikipedia <a href="http://en.wikipedia.org/wiki/Map_%28higher-order_function%29">explains</a> that Ruby provides both to make programmers feel more comfortable. <code>Map</code> is provided by many programming languages, and <code>collect</code> came from a language called <a href="http://en.wikipedia.org/wiki/Smalltalk">Smalltalk</a>.&nbsp;</p>
-
-<p>Other Ruby synonyms include the shovel operator <code>&lt;&lt;</code> and <code>concat</code>. The shovel is different than <code>+=</code> because <code>+=</code> creates a new String in memory, but &lt;&lt; is faster because it j<a href="http://stackoverflow.com/questions/4684446/why-is-the-shovel-operator-preferred-over-plus-equals-when-building-a">ust modifies the original one</a>.&nbsp;</p>
-
-<p>The for loop vs each appear to be synonyms but there is a scoping difference. The local variable used in for loops <a href="http://graysoftinc.com/early-steps/the-evils-of-the-for-loop">still exists after the loop</a>, which might have some unintended consequences for your program.</p>
-
-<p><img src="https://31.media.tumblr.com/199f291ec2b4895473c8eab50733e141/tumblr_inline_n7bb4tg2Kn1si9gc8.png" alt="image" /></p>
-
-<p>On a different note, <code>.size</code> is an alias for <code>.length</code>. But <code>count</code>, which seems similar, <a href="http://stackoverflow.com/questions/4550770/count-size-length-too-many-choices-in-ruby">is actually different</a>.&nbsp;</p>
-
-<p><img src="https://31.media.tumblr.com/ac5d9a927e601ecc93cb2b432d578819/tumblr_inline_n7bf5o2LtP1si9gc8.png" alt="image" /></p>
-
-<p>When the inventor of Ruby, Matz himself, was <a href="http://www.artima.com/intv/rubyP.html">asked to explain</a> why he provides so many ways to do the same thing, he said:</p>
-
-<blockquote><p><span>Ruby inherited the Perl philosophy of having more than one way to do the same thing. I inherited that philosophy from Larry Wall, who is my hero actually. I want to make Ruby users free. I want to give them the freedom to choose. People are different. People choose different criteria. But if there is a better way among many alternatives, I want to encourage that way by making it comfortable. So that&rsquo;s what I&rsquo;ve tried to do. Maybe Python code is a bit more readable. Everyone can write the same style of Python code, so it can be easier to read, maybe. But the difference from one person to the next is so big, providing only one way is little help even if you&rsquo;re using Python, I think. I&rsquo;d rather provide many ways if it&rsquo;s possible, but encourage or guide users to choose a better way if it&rsquo;s possible.</span></p></blockquote>
-
-<p>So that&rsquo;s the answer. When presented with two or three or twelve different ways to do the same thing in Ruby, you should choose whichever way makes you the most comfortable.</p>
-
-		
-		
-	</div>
-
-<div class="meta">
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
 	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
-</article>
 
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav>
+
 
     </div>
     <footer id="footer">
