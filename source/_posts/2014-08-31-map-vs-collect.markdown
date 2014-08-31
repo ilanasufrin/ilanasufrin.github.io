@@ -3,7 +3,7 @@ layout: post
 title: "Map vs Collect, and Other Ruby Synonyms"
 date: 2014-08-31 16:03:49 -0400
 comments: true
-categories: 
+categories: ruby, map, collect
 ---
 
 Ruby has a ton of high-level iterators. So how are you supposed to know which one to use when? More specifically, what's the difference between `map` and `collect`? They each produce a new array&nbsp;containing the results of the block applied to each element of the receiver. Both `map!` and `collect!` are offered to modify the array in place.

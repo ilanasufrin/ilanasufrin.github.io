@@ -3,7 +3,7 @@ layout: post
 title: "Take Web Scraping Further with Mechanize"
 date: 2014-08-31 16:09:57 -0400
 comments: true
-categories: 
+categories: ruby, gem, rubygem, subreddit, mechanize, nokogiri, random, code, programming
 ---
 
 Recently, the class learned how to use Nokogiri to scrape webpages. A quick Google search reveals that this is indeed the most popular web scraping gem. But many people combine Nokogiri with another gem, [Mechanize](https://rubygems.org/gems/mechanize), to extend its functionality by automating some of the work of clicking the &ldquo;next&rdquo; button or creating profiles. This post is a quick writeup of my experiences with Mechanize. Please note that I ended up using Mechanize&nbsp;_instead_ of Nokogiri, not in conjunction with it. This made parsing my html way more complicated than it had to be.
