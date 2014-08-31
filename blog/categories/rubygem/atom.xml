@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rubygem, | Ilana's Blog]]></title>
+  <link href="http://ilanasufrin.github.io/blog/categories/rubygem/atom.xml" rel="self"/>
+  <link href="http://ilanasufrin.github.io/"/>
+  <updated>2014-08-31T16:19:34-04:00</updated>
+  <id>http://ilanasufrin.github.io/</id>
+  <author>
+    <name><![CDATA[Ilana Sufrin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Take Web Scraping Further with Mechanize]]></title>
+    <link href="http://ilanasufrin.github.io/blog/2014/08/31/take-web-scraping-further-with-mechanize/"/>
+    <updated>2014-08-31T16:09:57-04:00</updated>
+    <id>http://ilanasufrin.github.io/blog/2014/08/31/take-web-scraping-further-with-mechanize</id>
+    <content type="html"><![CDATA[<p>Recently, the class learned how to use Nokogiri to scrape webpages. A quick Google search reveals that this is indeed the most popular web scraping gem. But many people combine Nokogiri with another gem, <a href="https://rubygems.org/gems/mechanize">Mechanize</a>, to extend its functionality by automating some of the work of clicking the &ldquo;next&rdquo; button or creating profiles. This post is a quick writeup of my experiences with Mechanize. Please note that I ended up using Mechanize&nbsp;<em>instead</em> of Nokogiri, not in conjunction with it. This made parsing my html way more complicated than it had to be.</p>
+
+<p>I followed a few different tutorials to do it, including&nbsp;<a href="http://www.icicletech.com/blog/web-scraping-with-ruby-using-mechanize-and-nokogiri-gems">this</a>&nbsp;and <a href="http://readysteadycode.com/howto-scrape-websites-with-ruby-and-mechanize">this</a>.</p>
+
+<p>I created an example file, <code>"mechanize_example.rb"</code>, to run from the command line. The ReadySteadyCode tutorial provides the following code snippet for getting a random wikipedia article and printing it to the terminal:</p>
+
+<pre>require 'mechanize'
+
+mechanize = Mechanize.new
+
+page = mechanize.get('http://en.wikipedia.org/wiki/Main_Page')
+
+link = page.link_with(text: 'Random article')
+
+page = link.click
+
+puts page.uri
+
+</pre>
+
+
+<blockquote><p><span>The #link_with method is provided by mechanize, and makes it easy to pull out the random article link. The #click method instructs mechanize to follow the link, and the #uri method returns the address of the page. Notice that mechanize follows redirects automatically, so this example makes three HTTP requests in&nbsp;total.</span></p></blockquote>
+
+<p>I decided to see how far I could take this example by modifying the code to generate interesting data from other websites with &ldquo;random&rdquo; functions.</p>
+
+<p>First, a simple change. I swapped out Wikipedia&rsquo;s info for Reddit&rsquo;s (I spend entirely too much time on Reddit anyway.) I was able to print random subreddits to my command line.</p>
+
+<pre><code>require 'mechanize'
+
+mechanize = Mechanize.new
+
+page = mechanize.get('http://www.reddit.com/')
+
+link = page.link_with(text: 'random subreddit')
+
+page = link.click
+
+puts page.uri
+</code></pre>
+
+<p>This code yields such glorious random subreddits as&nbsp;<a href="http://www.reddit.com/r/CrossStitch/">http://www.reddit.com/r/CrossStitch/</a> and&nbsp;<a href="http://www.reddit.com/r/AntiAntiJokes/.">http://www.reddit.com/r/AntiAntiJokes/.</a></p>
+
+<p>But what else could I do besides print random urls to the command line? Could I also use it to give me the title of the top link on each page? Hint: yes.</p>
+
+<pre>require 'mechanize'
+
+mechanize = Mechanize.new
+
+page = mechanize.get('http://www.reddit.com/')
+
+link = page.link_with(text: 'random subreddit')
+
+page = link.click
+
+first_link = page.search '/html/body/div/div/div/div/p/a'
+
+puts page.uri
+puts first_link.first.text.strip
+</pre>
+
+
+<p>Here&rsquo;s where not using Nokogiri came back to haunt me: look at how complicated parsing the html had become. I was also getting error messages whenever the subreddit was empty (that means it contains no links.) But my command line printouts now magically included results like:</p>
+
+<p><code>http://www.reddit.com/r/cincinnati/
+ Just framed this 1902 map up for my dad</code></p>
+
+<p>and</p>
+
+<p><code>http://www.reddit.com/r/Images/
+ Returned to my friends car to find this letter from 7 year old Justin</code></p>
+
+<p>This idea can be taken so much further! I plan to extend it in the future by taking to the web and creating a game where people can vote on randomly generated subreddits that are pitted against each other. We&rsquo;ll see which ones are the most popular by name alone.</p>
+
+<p>I might also be able to use Mechanize to create a reddit bot that responds to regular expressions, but we&rsquo;ll leave that for a theoretical time in the future when I understand regular expressions.</p>
+
+<p><strong>Edit:</strong></p>
+
+<p>Due to popular demand, I&rsquo;ve turned the subreddit generator into a gem! See:
+<a href="https://rubygems.org/gems/subreddit">https://rubygems.org/gems/subreddit</a></p>
+]]></content>
+  </entry>
+  
+</feed>

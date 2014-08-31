@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: map, | Ilana's Blog]]></title>
+  <link href="http://ilanasufrin.github.io/blog/categories/map/atom.xml" rel="self"/>
+  <link href="http://ilanasufrin.github.io/"/>
+  <updated>2014-08-31T16:19:34-04:00</updated>
+  <id>http://ilanasufrin.github.io/</id>
+  <author>
+    <name><![CDATA[Ilana Sufrin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Map vs Collect, and Other Ruby Synonyms]]></title>
+    <link href="http://ilanasufrin.github.io/blog/2014/08/31/map-vs-collect/"/>
+    <updated>2014-08-31T16:03:49-04:00</updated>
+    <id>http://ilanasufrin.github.io/blog/2014/08/31/map-vs-collect</id>
+    <content type="html"><![CDATA[<p>Ruby has a ton of high-level iterators. So how are you supposed to know which one to use when? More specifically, what&rsquo;s the difference between <code>map</code> and <code>collect</code>? They each produce a new array&nbsp;containing the results of the block applied to each element of the receiver. Both <code>map!</code> and <code>collect!</code> are offered to modify the array in place.</p>
+
+<p>Some sources assert that the two methods are <a href="http://rubyinrails.com/2014/01/ruby-difference-between-collect-and-map/">the same</a>. Both are array methods that can work with anything that is <a href="http://ruby-doc.org/core-2.1.2/Enumerable.htm">Enumerable</a>. Ruby is written in C, and the C-level implementation is identical. Here is that implementation:</p>
+
+<p><img src="https://31.media.tumblr.com/58cacab14980d9cb6fcdf6a4fc410c2f/tumblr_inline_n7ba2wiZs51si9gc8.png" alt="image" /></p>
+
+<p>But then why have both?&nbsp;</p>
+
+<p>Wikipedia <a href="http://en.wikipedia.org/wiki/Map_%28higher-order_function%29">explains</a> that Ruby provides both to make programmers feel more comfortable. <code>Map</code> is provided by many programming languages, and <code>collect</code> came from a language called <a href="http://en.wikipedia.org/wiki/Smalltalk">Smalltalk</a>.&nbsp;</p>
+
+<p>Other Ruby synonyms include the shovel operator <code>&lt;&lt;</code> and <code>concat</code>. The shovel is different than <code>+=</code> because <code>+=</code> creates a new String in memory, but &lt;&lt; is faster because it j<a href="http://stackoverflow.com/questions/4684446/why-is-the-shovel-operator-preferred-over-plus-equals-when-building-a">ust modifies the original one</a>.&nbsp;</p>
+
+<p>The for loop vs each appear to be synonyms but there is a scoping difference. The local variable used in for loops <a href="http://graysoftinc.com/early-steps/the-evils-of-the-for-loop">still exists after the loop</a>, which might have some unintended consequences for your program.</p>
+
+<p><img src="https://31.media.tumblr.com/199f291ec2b4895473c8eab50733e141/tumblr_inline_n7bb4tg2Kn1si9gc8.png" alt="image" /></p>
+
+<p>On a different note, <code>.size</code> is an alias for <code>.length</code>. But <code>count</code>, which seems similar, <a href="http://stackoverflow.com/questions/4550770/count-size-length-too-many-choices-in-ruby">is actually different</a>.&nbsp;</p>
+
+<p><img src="https://31.media.tumblr.com/ac5d9a927e601ecc93cb2b432d578819/tumblr_inline_n7bf5o2LtP1si9gc8.png" alt="image" /></p>
+
+<p>When the inventor of Ruby, Matz himself, was <a href="http://www.artima.com/intv/rubyP.html">asked to explain</a> why he provides so many ways to do the same thing, he said:</p>
+
+<blockquote><p><span>Ruby inherited the Perl philosophy of having more than one way to do the same thing. I inherited that philosophy from Larry Wall, who is my hero actually. I want to make Ruby users free. I want to give them the freedom to choose. People are different. People choose different criteria. But if there is a better way among many alternatives, I want to encourage that way by making it comfortable. So that&rsquo;s what I&rsquo;ve tried to do. Maybe Python code is a bit more readable. Everyone can write the same style of Python code, so it can be easier to read, maybe. But the difference from one person to the next is so big, providing only one way is little help even if you&rsquo;re using Python, I think. I&rsquo;d rather provide many ways if it&rsquo;s possible, but encourage or guide users to choose a better way if it&rsquo;s possible.</span></p></blockquote>
+
+<p>So that&rsquo;s the answer. When presented with two or three or twelve different ways to do the same thing in Ruby, you should choose whichever way makes you the most comfortable.</p>
+]]></content>
+  </entry>
+  
+</feed>

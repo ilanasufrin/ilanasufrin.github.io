@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hackathon, | Ilana's Blog]]></title>
+  <link href="http://ilanasufrin.github.io/blog/categories/hackathon/atom.xml" rel="self"/>
+  <link href="http://ilanasufrin.github.io/"/>
+  <updated>2014-08-31T16:19:34-04:00</updated>
+  <id>http://ilanasufrin.github.io/</id>
+  <author>
+    <name><![CDATA[Ilana Sufrin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Baby's First Hackathon]]></title>
+    <link href="http://ilanasufrin.github.io/blog/2014/08/31/babys-first-hackathon/"/>
+    <updated>2014-08-31T16:18:17-04:00</updated>
+    <id>http://ilanasufrin.github.io/blog/2014/08/31/babys-first-hackathon</id>
+    <content type="html"><![CDATA[<p>Over the weekend, I competed in my very first hackathon. <span>It was run by<span class="Apple-converted-space">&nbsp;</span></span><a href="http://www.ideo.com/">IDEO</a><span>, and the theme was waste and surplus in NYC:</span></p>
+
+<p><a href="http://www.ideo.com/hackathon/nyc/">http://www.ideo.com/hackathon/nyc/</a></p>
+
+<p>I just want to reflect on my experience here since the hackathon was very different than I was expecting.</p>
+
+<p>&hellip;</p>
+
+<p>My friend Wenting is a UX designer at Viacom and my friend Jesse is a professional Rails developer, so they&rsquo;re both way more experienced than me. We agreed that I would &ldquo;help&rdquo; Jesse but he would do the heavy lifting of architecting the backend. Wenting had already thought of an idea and briefed us on it before we arrived at IDEO.</p>
+
+<p>When we got to the venue near Canal Street, we were surprised to discover that almost nobody was a developer, and almost nobody had a ready-made team. Furthermore, the hackathon was scheduled to be very short: it was only Friday and Saturday as opposed to lasting the entire weekend.
+I have a feeling that IDEO didn&rsquo;t really know how to run a hackathon.</p>
+
+<p>Most people got to work finding a team, but since I came with my friends we could get to work right away. We ended up picking up a fourth teammate, Hao, who is an amazing biv/dev guy and probably is the reason we were so successful.</p>
+
+<p>Hao did market research on our competitors while we started programming. Wenting sat apart from us and built the frontend while Jesse and I brainstormed what our models and migrations should look like. The lack of communication turned out to be a huge problem later because Wenting built a single-page app that couldn&rsquo;t be connected to our multi-page backend. We coded late into the night, went home for a few hours, and came back to IDEO at 9am the next morning.</p>
+
+<hr />
+
+<p>On Saturday, Wenting arrived and told us that she had decided not to do photoshop mockups because there wasn&rsquo;t time. She was just going to build what she saw in her head. I was a little nervous but agreed that we didn&rsquo;t have time to build the app the usual way.</p>
+
+<p>I was inordinately proud of myself a couple hours later when Jesse told me that form_for confused him so he always hard-coded the html in his forms. I insisted that we use form_for, and together we figured it out. Win for Flatiron!</p>
+
+<hr />
+
+<p>Jesse and I inevitably ran out of time, so our app was barely functional. It was time to upload our slides, but we had almost nothing working. It could only do three things: authenticate with Google, calculate who&rsquo;s closest to you (the meat of the app), and send text messages (thank you, Twilio!)</p>
+
+<hr />
+
+<p>Hao advised us that since we didn&rsquo;t have anything to actually <em>show</em> the audience, we shouldn&rsquo;t present any tech at all. We just let him talk about how awesome the app is, and then I took questions about our plans for expansion. And we ended up taking 3rd place out of 12!</p>
+
+<p><span>As far as I can tell, there are no press releases announcing the winners. But it&rsquo;s all over my<span class="Apple-converted-space">&nbsp;</span></span><a href="https://twitter.com/IlanaSufrin">twitter</a><span>.</span></p>
+
+<p><span>I wrote a short description of our app, in case anyone is interested.</p>
+
+<p></span></p>
+
+<blockquote><p><div>Free Stuff Fairy is a web/mobile app that connects unwanted goods&ndash;potential waste&ndash;with people who need them. It encourages the reuse of goods in New York City by making the exchange fun and easy. It dynamically generates peer-to-peer offers using a distance-based algorithm. The closest users have the first opportunities to claim an offer. Once a match has been made, Free Stuff Fairy sends a text message (through the Twilio API) to let the recipient know that they&rsquo;ve been chosen for a certain item. They can then accept or reject the offer within the given time limit.
+&nbsp;</div></p></blockquote>
+
+<p><span><span class="Apple-converted-space"></span></span></p>
+
+<p> My favorite code from the weekend was Jesse&rsquo;s distance algorithm:</p>
+
+<pre>class Matcher
+  DELTA = 0.003
+
+  def self.match_user_to_available_item(user)
+    lat = user.latitude
+    lng = user.longitude
+    item = Item.available
+      .where('latitude BETWEEN ? AND ?', lat-DELTA, lat+DELTA)
+      .where('longitude BETWEEN ? AND ?', lng-DELTA, lng+DELTA)
+      .first
+    if item
+      item.update(status: :unavailable)
+      item.offers.create!(owner_id: item.user_id, recipient_id: user.id)
+    end
+  end
+
+  def self.match_item_to_available_user(item)
+    lat = item.latitude
+    lng = item.longitude
+    user = User.where('latitude BETWEEN ? AND ?', lat-DELTA, lat+DELTA)
+      .where('longitude BETWEEN ? AND ?', lng-DELTA, lng+DELTA)
+      .without_offer
+      .first
+    if user
+      offer = item.offers.create!(owner_id: item.user_id, recipient: user)
+      item.update(status: :unavailable)
+      offer
+    end
+  end
+end</pre>
+
+
+<p><span></p>
+
+<p>Our<span class="Apple-converted-space">&nbsp;</span></span><a href="http://fennel-loves-you-too.herokuapp.com/">product</a><span><span class="Apple-converted-space">&nbsp;</span>is definitely<span class="Apple-converted-space">&nbsp;</span></span><strong>NOT</strong><span><span class="Apple-converted-space">&nbsp;</span>functional yet but we have a plan to meet every night and finish it before BigApps.</span></p>
+
+<p><span>&mdash;</p>
+
+<p>FINAL THOUGHTS:</p>
+
+<p>I would really not advise that anybody go to a hackathon until we&rsquo;re a bit more experienced. My friends agreed that I could approach this one as a student, and I definitely don&rsquo;t think I was slowing Jesse down (if anything I was helping him debug his code by asking a million questions), but I wish I had more to contribute to my team.
+Also, sleep deprivation.</span></p>
+]]></content>
+  </entry>
+  
+</feed>
