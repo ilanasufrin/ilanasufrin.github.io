@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Rails Grammer Lesson"
+title: "A Rails Grammar Lesson"
 date: 2014-08-31 16:26:48 -0400
 comments: true
 categories: ruby, ruby on rails, rails, grammar
