@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Ilana's Blog]]></title>
   <link href="http://ilanasufrin.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://ilanasufrin.github.io/"/>
-  <updated>2014-08-31T16:33:02-04:00</updated>
+  <updated>2014-08-31T16:47:47-04:00</updated>
   <id>http://ilanasufrin.github.io/</id>
   <author>
     <name><![CDATA[Ilana Sufrin]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[A Rails Grammar Lesson]]></title>
     <link href="http://ilanasufrin.github.io/blog/2014/08/31/a-rails-grammar-lesson/"/>
-    <updated>2014-08-31T16:26:48-04:00</updated>
+    <updated>2014-08-31T16:33:41-04:00</updated>
     <id>http://ilanasufrin.github.io/blog/2014/08/31/a-rails-grammar-lesson</id>
     <content type="html"><![CDATA[<p>Since I first started learning Rails, one thing that struck me was how incredibly smart the framework is. Not just in anticipating paths and RESTful patterns, but also how class <code>Person</code> magically becomes table <code>People</code> in the database. How in the world does Rails know that it&rsquo;s not the <code>Persons</code> controller/table? Has somebody hardcoded every possible grammar edge case? I made it my mission to find out.</p>
 

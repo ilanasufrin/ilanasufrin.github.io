@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Ilana's Blog]]></title>
-  <link href="http://ilanasufrin.github.io/atom.xml" rel="self"/>
-  <link href="http://ilanasufrin.github.io/"/>
-  <updated>2014-08-31T16:33:02-04:00</updated>
-  <id>http://ilanasufrin.github.io/</id>
-  <author>
-    <name><![CDATA[Ilana Sufrin]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+	<title><![CDATA[Ilana's Blog]]></title>
+	<link href="http://ilanasufrin.github.io/atom.xml" rel="self"/>
+	<link href="http://ilanasufrin.github.io/"/>
+	<updated>2014-08-31T16:47:47-04:00</updated>
+	<id>http://ilanasufrin.github.io/</id>
+	<author>
+		<name><![CDATA[Ilana Sufrin]]></name>
+		
+	</author>
+	<generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[A Rails Grammar Lesson]]></title>
-    <link href="http://ilanasufrin.github.io/blog/2014/08/31/a-rails-grammar-lesson/"/>
-    <updated>2014-08-31T16:26:48-04:00</updated>
-    <id>http://ilanasufrin.github.io/blog/2014/08/31/a-rails-grammar-lesson</id>
-    <content type="html"><![CDATA[<p>Since I first started learning Rails, one thing that struck me was how incredibly smart the framework is. Not just in anticipating paths and RESTful patterns, but also how class <code>Person</code> magically becomes table <code>People</code> in the database. How in the world does Rails know that it&rsquo;s not the <code>Persons</code> controller/table? Has somebody hardcoded every possible grammar edge case? I made it my mission to find out.</p>
+	
+	<entry>
+		
+			<title type="html"><![CDATA[A Rails Grammar Lesson]]></title>
+		
+		<link href="http://ilanasufrin.github.io/blog/2014/08/31/a-rails-grammar-lesson/"/>
+		<updated>2014-08-31T16:33:41-04:00</updated>
+		<id>http://ilanasufrin.github.io/blog/2014/08/31/a-rails-grammar-lesson</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<p>Since I first started learning Rails, one thing that struck me was how incredibly smart the framework is. Not just in anticipating paths and RESTful patterns, but also how class <code>Person</code> magically becomes table <code>People</code> in the database. How in the world does Rails know that it&rsquo;s not the <code>Persons</code> controller/table? Has somebody hardcoded every possible grammar edge case? I made it my mission to find out.</p>
 
 <p>As <a href="http://underpop.free.fr/r/ruby-on-rails/cookbook/I_0596527314_CHP_2_SECT_6.html">this</a> handy blog post points out, if you want to see how Rails <em>would</em> pluralize a word, just run a generator command with the <code>--pretend</code> or <code>-p</code> option:</p>
 
@@ -82,15 +90,24 @@ These rules are applied before the rules defined in inflections.rb. _</pre>
 <p>So there you have it, fellow grammar enthusiasts. The Rubyists who came before us took the time to painstakingly define pluralization rules in <a href="https://github.com/rails/rails/blob/92f567ab30f240a1de152061a6eee76ca6c4da86/activesupport/lib/active_support/inflections.rb">this</a> file. You can override them if you&rsquo;d like. In fact, you might <em>have</em> to override them if your models are made-up or non-English words.</p>
 
 <p><img src="https://31.media.tumblr.com/bbe7cd18619444794e45c490042d8cce/tumblr_inline_n9ifetNwqO1si9gc8.png" alt="image" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Baby's First Hackathon]]></title>
-    <link href="http://ilanasufrin.github.io/blog/2014/08/31/babys-first-hackathon/"/>
-    <updated>2014-08-31T16:18:17-04:00</updated>
-    <id>http://ilanasufrin.github.io/blog/2014/08/31/babys-first-hackathon</id>
-    <content type="html"><![CDATA[<p>Over the weekend, I competed in my very first hackathon. <span>It was run by<span class="Apple-converted-space">&nbsp;</span></span><a href="http://www.ideo.com/">IDEO</a><span>, and the theme was waste and surplus in NYC:</span></p>
+]]>
+		</content>
+	</entry>
+	
+	<entry>
+		
+			<title type="html"><![CDATA[Baby's First Hackathon]]></title>
+		
+		<link href="http://ilanasufrin.github.io/blog/2014/08/31/babys-first-hackathon/"/>
+		<updated>2014-08-31T16:18:17-04:00</updated>
+		<id>http://ilanasufrin.github.io/blog/2014/08/31/babys-first-hackathon</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<p>Over the weekend, I competed in my very first hackathon. <span>It was run by<span class="Apple-converted-space">&nbsp;</span></span><a href="http://www.ideo.com/">IDEO</a><span>, and the theme was waste and surplus in NYC:</span></p>
 
 <p><a href="http://www.ideo.com/hackathon/nyc/">http://www.ideo.com/hackathon/nyc/</a></p>
 
@@ -176,15 +193,24 @@ end</pre>
 
 <p>I would really not advise that anybody go to a hackathon until we&rsquo;re a bit more experienced. My friends agreed that I could approach this one as a student, and I definitely don&rsquo;t think I was slowing Jesse down (if anything I was helping him debug his code by asking a million questions), but I wish I had more to contribute to my team.
 Also, sleep deprivation.</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Take Web Scraping Further with Mechanize]]></title>
-    <link href="http://ilanasufrin.github.io/blog/2014/08/31/take-web-scraping-further-with-mechanize/"/>
-    <updated>2014-08-31T16:09:57-04:00</updated>
-    <id>http://ilanasufrin.github.io/blog/2014/08/31/take-web-scraping-further-with-mechanize</id>
-    <content type="html"><![CDATA[<p>Recently, the class learned how to use Nokogiri to scrape webpages. A quick Google search reveals that this is indeed the most popular web scraping gem. But many people combine Nokogiri with another gem, <a href="https://rubygems.org/gems/mechanize">Mechanize</a>, to extend its functionality by automating some of the work of clicking the &ldquo;next&rdquo; button or creating profiles. This post is a quick writeup of my experiences with Mechanize. Please note that I ended up using Mechanize&nbsp;<em>instead</em> of Nokogiri, not in conjunction with it. This made parsing my html way more complicated than it had to be.</p>
+]]>
+		</content>
+	</entry>
+	
+	<entry>
+		
+			<title type="html"><![CDATA[Take Web Scraping Further with Mechanize]]></title>
+		
+		<link href="http://ilanasufrin.github.io/blog/2014/08/31/take-web-scraping-further-with-mechanize/"/>
+		<updated>2014-08-31T16:09:57-04:00</updated>
+		<id>http://ilanasufrin.github.io/blog/2014/08/31/take-web-scraping-further-with-mechanize</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<p>Recently, the class learned how to use Nokogiri to scrape webpages. A quick Google search reveals that this is indeed the most popular web scraping gem. But many people combine Nokogiri with another gem, <a href="https://rubygems.org/gems/mechanize">Mechanize</a>, to extend its functionality by automating some of the work of clicking the &ldquo;next&rdquo; button or creating profiles. This post is a quick writeup of my experiences with Mechanize. Please note that I ended up using Mechanize&nbsp;<em>instead</em> of Nokogiri, not in conjunction with it. This made parsing my html way more complicated than it had to be.</p>
 
 <p>I followed a few different tutorials to do it, including&nbsp;<a href="http://www.icicletech.com/blog/web-scraping-with-ruby-using-mechanize-and-nokogiri-gems">this</a>&nbsp;and <a href="http://readysteadycode.com/howto-scrape-websites-with-ruby-and-mechanize">this</a>.</p>
 
@@ -263,15 +289,24 @@ puts first_link.first.text.strip
 
 <p>Due to popular demand, I&rsquo;ve turned the subreddit generator into a gem! See:
 <a href="https://rubygems.org/gems/subreddit">https://rubygems.org/gems/subreddit</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Map vs Collect, and Other Ruby Synonyms]]></title>
-    <link href="http://ilanasufrin.github.io/blog/2014/08/31/map-vs-collect/"/>
-    <updated>2014-08-31T16:03:49-04:00</updated>
-    <id>http://ilanasufrin.github.io/blog/2014/08/31/map-vs-collect</id>
-    <content type="html"><![CDATA[<p>Ruby has a ton of high-level iterators. So how are you supposed to know which one to use when? More specifically, what&rsquo;s the difference between <code>map</code> and <code>collect</code>? They each produce a new array&nbsp;containing the results of the block applied to each element of the receiver. Both <code>map!</code> and <code>collect!</code> are offered to modify the array in place.</p>
+]]>
+		</content>
+	</entry>
+	
+	<entry>
+		
+			<title type="html"><![CDATA[Map vs Collect, and Other Ruby Synonyms]]></title>
+		
+		<link href="http://ilanasufrin.github.io/blog/2014/08/31/map-vs-collect/"/>
+		<updated>2014-08-31T16:03:49-04:00</updated>
+		<id>http://ilanasufrin.github.io/blog/2014/08/31/map-vs-collect</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<p>Ruby has a ton of high-level iterators. So how are you supposed to know which one to use when? More specifically, what&rsquo;s the difference between <code>map</code> and <code>collect</code>? They each produce a new array&nbsp;containing the results of the block applied to each element of the receiver. Both <code>map!</code> and <code>collect!</code> are offered to modify the array in place.</p>
 
 <p>Some sources assert that the two methods are <a href="http://rubyinrails.com/2014/01/ruby-difference-between-collect-and-map/">the same</a>. Both are array methods that can work with anything that is <a href="http://ruby-doc.org/core-2.1.2/Enumerable.htm">Enumerable</a>. Ruby is written in C, and the C-level implementation is identical. Here is that implementation:</p>
 
@@ -296,7 +331,8 @@ puts first_link.first.text.strip
 <blockquote><p><span>Ruby inherited the Perl philosophy of having more than one way to do the same thing. I inherited that philosophy from Larry Wall, who is my hero actually. I want to make Ruby users free. I want to give them the freedom to choose. People are different. People choose different criteria. But if there is a better way among many alternatives, I want to encourage that way by making it comfortable. So that&rsquo;s what I&rsquo;ve tried to do. Maybe Python code is a bit more readable. Everyone can write the same style of Python code, so it can be easier to read, maybe. But the difference from one person to the next is so big, providing only one way is little help even if you&rsquo;re using Python, I think. I&rsquo;d rather provide many ways if it&rsquo;s possible, but encourage or guide users to choose a better way if it&rsquo;s possible.</span></p></blockquote>
 
 <p>So that&rsquo;s the answer. When presented with two or three or twelve different ways to do the same thing in Ruby, you should choose whichever way makes you the most comfortable.</p>
-]]></content>
-  </entry>
-  
+]]>
+		</content>
+	</entry>
+	
 </feed>
