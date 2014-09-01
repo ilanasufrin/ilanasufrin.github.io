@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Baby's First Hackathon"
-date: 2014-08-31 16:18:17 -0400
+date: 2014-07-15 16:18:17 -0400
 comments: true
 categories: hackathon, ideo, nyhackswaste
 ---

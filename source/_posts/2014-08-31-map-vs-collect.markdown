@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Map vs Collect, and Other Ruby Synonyms"
-date: 2014-08-31 16:03:49 -0400
+date: 2014-06-17 16:03:49 -0400
 comments: true
 categories: ruby, map, collect
 ---

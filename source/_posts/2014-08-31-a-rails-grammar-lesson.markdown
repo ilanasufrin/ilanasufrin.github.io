@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Rails Grammar Lesson"
-date: 2014-08-31 16:33:41 -0400
+date: 2014-07-30 16:33:41 -0400
 comments: true
 categories: ruby, ruby on rails, rails, grammar
 ---

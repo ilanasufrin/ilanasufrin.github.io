@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Take Web Scraping Further with Mechanize"
-date: 2014-08-31 16:09:57 -0400
+date: 2014-07-01 16:09:57 -0400
 comments: true
 categories: ruby, gem, rubygem, subreddit, mechanize, nokogiri, random, code, programming
 ---
