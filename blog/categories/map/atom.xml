@@ -4,7 +4,7 @@
   <title><![CDATA[Category: map, | Ilana's Blog]]></title>
   <link href="http://ilanasufrin.github.io/blog/categories/map/atom.xml" rel="self"/>
   <link href="http://ilanasufrin.github.io/"/>
-  <updated>2014-08-31T17:14:42-04:00</updated>
+  <updated>2014-09-01T01:41:49-04:00</updated>
   <id>http://ilanasufrin.github.io/</id>
   <author>
     <name><![CDATA[Ilana Sufrin]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Map vs Collect, and Other Ruby Synonyms]]></title>
-    <link href="http://ilanasufrin.github.io/blog/2014/08/31/map-vs-collect/"/>
-    <updated>2014-08-31T16:03:49-04:00</updated>
-    <id>http://ilanasufrin.github.io/blog/2014/08/31/map-vs-collect</id>
+    <link href="http://ilanasufrin.github.io/blog/2014/06/17/map-vs-collect/"/>
+    <updated>2014-06-17T16:03:49-04:00</updated>
+    <id>http://ilanasufrin.github.io/blog/2014/06/17/map-vs-collect</id>
     <content type="html"><![CDATA[<p>Ruby has a ton of high-level iterators. So how are you supposed to know which one to use when? More specifically, what&rsquo;s the difference between <code>map</code> and <code>collect</code>? They each produce a new array&nbsp;containing the results of the block applied to each element of the receiver. Both <code>map!</code> and <code>collect!</code> are offered to modify the array in place.</p>
 
 <p>Some sources assert that the two methods are <a href="http://rubyinrails.com/2014/01/ruby-difference-between-collect-and-map/">the same</a>. Both are array methods that can work with anything that is <a href="http://ruby-doc.org/core-2.1.2/Enumerable.htm">Enumerable</a>. Ruby is written in C, and the C-level implementation is identical. Here is that implementation:</p>

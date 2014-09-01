@@ -4,7 +4,7 @@
 	<title><![CDATA[Ilana's Blog]]></title>
 	<link href="http://ilanasufrin.github.io/atom.xml" rel="self"/>
 	<link href="http://ilanasufrin.github.io/"/>
-	<updated>2014-08-31T17:14:42-04:00</updated>
+	<updated>2014-09-01T01:41:49-04:00</updated>
 	<id>http://ilanasufrin.github.io/</id>
 	<author>
 		<name><![CDATA[Ilana Sufrin]]></name>
@@ -17,9 +17,9 @@
 		
 			<title type="html"><![CDATA[A Rails Grammar Lesson]]></title>
 		
-		<link href="http://ilanasufrin.github.io/blog/2014/08/31/a-rails-grammar-lesson/"/>
-		<updated>2014-08-31T16:33:41-04:00</updated>
-		<id>http://ilanasufrin.github.io/blog/2014/08/31/a-rails-grammar-lesson</id>
+		<link href="http://ilanasufrin.github.io/blog/2014/07/30/a-rails-grammar-lesson/"/>
+		<updated>2014-07-30T16:33:41-04:00</updated>
+		<id>http://ilanasufrin.github.io/blog/2014/07/30/a-rails-grammar-lesson</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -98,9 +98,9 @@ These rules are applied before the rules defined in inflections.rb. _</pre>
 		
 			<title type="html"><![CDATA[Baby's First Hackathon]]></title>
 		
-		<link href="http://ilanasufrin.github.io/blog/2014/08/31/babys-first-hackathon/"/>
-		<updated>2014-08-31T16:18:17-04:00</updated>
-		<id>http://ilanasufrin.github.io/blog/2014/08/31/babys-first-hackathon</id>
+		<link href="http://ilanasufrin.github.io/blog/2014/07/15/babys-first-hackathon/"/>
+		<updated>2014-07-15T16:18:17-04:00</updated>
+		<id>http://ilanasufrin.github.io/blog/2014/07/15/babys-first-hackathon</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -201,9 +201,9 @@ Also, sleep deprivation.</span></p>
 		
 			<title type="html"><![CDATA[Take Web Scraping Further with Mechanize]]></title>
 		
-		<link href="http://ilanasufrin.github.io/blog/2014/08/31/take-web-scraping-further-with-mechanize/"/>
-		<updated>2014-08-31T16:09:57-04:00</updated>
-		<id>http://ilanasufrin.github.io/blog/2014/08/31/take-web-scraping-further-with-mechanize</id>
+		<link href="http://ilanasufrin.github.io/blog/2014/07/01/take-web-scraping-further-with-mechanize/"/>
+		<updated>2014-07-01T16:09:57-04:00</updated>
+		<id>http://ilanasufrin.github.io/blog/2014/07/01/take-web-scraping-further-with-mechanize</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -297,9 +297,9 @@ puts first_link.first.text.strip
 		
 			<title type="html"><![CDATA[Map vs Collect, and Other Ruby Synonyms]]></title>
 		
-		<link href="http://ilanasufrin.github.io/blog/2014/08/31/map-vs-collect/"/>
-		<updated>2014-08-31T16:03:49-04:00</updated>
-		<id>http://ilanasufrin.github.io/blog/2014/08/31/map-vs-collect</id>
+		<link href="http://ilanasufrin.github.io/blog/2014/06/17/map-vs-collect/"/>
+		<updated>2014-06-17T16:03:49-04:00</updated>
+		<id>http://ilanasufrin.github.io/blog/2014/06/17/map-vs-collect</id>
 		<content type="html">
 			<![CDATA[
 				

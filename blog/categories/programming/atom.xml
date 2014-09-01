@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | Ilana's Blog]]></title>
   <link href="http://ilanasufrin.github.io/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://ilanasufrin.github.io/"/>
-  <updated>2014-08-31T17:14:42-04:00</updated>
+  <updated>2014-09-01T01:41:49-04:00</updated>
   <id>http://ilanasufrin.github.io/</id>
   <author>
     <name><![CDATA[Ilana Sufrin]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Take Web Scraping Further with Mechanize]]></title>
-    <link href="http://ilanasufrin.github.io/blog/2014/08/31/take-web-scraping-further-with-mechanize/"/>
-    <updated>2014-08-31T16:09:57-04:00</updated>
-    <id>http://ilanasufrin.github.io/blog/2014/08/31/take-web-scraping-further-with-mechanize</id>
+    <link href="http://ilanasufrin.github.io/blog/2014/07/01/take-web-scraping-further-with-mechanize/"/>
+    <updated>2014-07-01T16:09:57-04:00</updated>
+    <id>http://ilanasufrin.github.io/blog/2014/07/01/take-web-scraping-further-with-mechanize</id>
     <content type="html"><![CDATA[<p>Recently, the class learned how to use Nokogiri to scrape webpages. A quick Google search reveals that this is indeed the most popular web scraping gem. But many people combine Nokogiri with another gem, <a href="https://rubygems.org/gems/mechanize">Mechanize</a>, to extend its functionality by automating some of the work of clicking the &ldquo;next&rdquo; button or creating profiles. This post is a quick writeup of my experiences with Mechanize. Please note that I ended up using Mechanize&nbsp;<em>instead</em> of Nokogiri, not in conjunction with it. This made parsing my html way more complicated than it had to be.</p>
 
 <p>I followed a few different tutorials to do it, including&nbsp;<a href="http://www.icicletech.com/blog/web-scraping-with-ruby-using-mechanize-and-nokogiri-gems">this</a>&nbsp;and <a href="http://readysteadycode.com/howto-scrape-websites-with-ruby-and-mechanize">this</a>.</p>
