@@ -41,7 +41,7 @@ You can define any route you'd like here by changing the arguments passed to `ap
 _Pro tip:_
 _You can define a middleware function here that will get called every time the server receives a request. For example, checking the request for certain media types to redirect users if they visit your site on an iPad. [Just pass a function to `app.use()`](http://expressjs.com/api#app.use)._
 
-Congratulations! You've officially set up a basic Node app that knows how to handle routes and display text passed in as strings! The rest of this guide will focus on setting up apps with more complicated functionality. Remember that every time you make a change to code, you must restart the server on the command line if you want to see the changes reflected in your browser.
+Congratulations! You've officially set up a basic Node app that knows how to handle routes and display text passed in as strings! The rest of this guide will focus on setting up apps with more complicated functionality. Remember that every time you make a change to your code, you must restart the server on the command line if you want to see the changes reflected in your browser.
 
 **OPTIONAL: Getting Started with a Templating Library ([Consolidate.js](https://github.com/visionmedia/consolidate.js))
 **
