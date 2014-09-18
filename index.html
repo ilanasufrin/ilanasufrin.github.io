@@ -51,6 +51,131 @@
 		<!-- START OF _includes/article.html -->
 <article>
 	<header>
+		<h1><a href="/blog/2014/09/18/node-dot-js-quickstart-guide/">Node.js Quickstart Guide, Now With 50% More Pro Tips</a></h1>
+		<time>18 September 2014</time>
+	</header>
+		<div class="content">
+			<p>Those of us who just graduated from the Flatiron School have plenty of experience setting up Rails applications. Maybe we&rsquo;ll choose Sinatra if we&rsquo;re feeling daring and minimal. But the internet is a big place, and there are tons of other frameworks to explore. One of the most popular (and trendy) choices today is Node, running on the Express framework.</p>
+
+<p>To be fair, I built <a href="www.tweetworld.me">my final project</a> for the Flatiron School in Node. But I concentrated on the database work and general functionality, allowing one of my teammates to set up the server and routes. I decided to review Node by setting up a <a href="https://github.com/ilanasufrin/sampleNodeApp">simple &ldquo;Hello World&rdquo; application</a> with help from Aaron from Fog Creek/Trello. <a href="https://trello.com/">Trello</a> actually runs on Node and Express so Aaron had some great tips for me!</p>
+
+<p>The <a href="http://expressjs.com/guide.html">Node/Express</a> documentation is very good. Once you install both technologies and make a directory for your app, you just have to make the two required files: <code>package.json</code> and <code>app.js</code>. The former keeps track of all your dependencies and behaves virtually identically to a Gemfile in Ruby. The latter sets up routes and actually starts the app. In any real-world scenario, you&rsquo;d also need files for views, app logic, styling, etc. But for the purposes of our Hello World app, you can get away with the two files.</p>
+
+<p>Here&rsquo;s what your <code>package.json</code> should look like at first:</p>
+
+<p><img src="https://31.media.tumblr.com/b3e681c78cd3b664d92f58c284b063d0/tumblr_inline_nc2crfM68j1si9gc8.png" alt="image" /></p>
+
+<p>Now you can just type:</p>
+
+<p> <code>npm install</code></p>
+
+<p>on the command line to install the one listed dependency.</p>
+
+<p><em>Pro tip:
+ If you want to add dependencies (like templating engines or anything else) in the future but don&rsquo;t feel like manually adding it to <code>package.json</code>, just install it on the command line with the <code>--save</code> option. For example, <code>npm install underscore --save</code>.</em></p>
+
+<p>Now we have to actually set up the server. The documentation for what goes in the <code>app.js</code> file is quite clear:</p>
+
+<p><img src="https://31.media.tumblr.com/f23f2865e691a0fdb5f15b1c70bb5469/tumblr_inline_nc2d3jLV2w1si9gc8.png" alt="image" /></p>
+
+<p>If you&rsquo;ve followed these steps exactly you should have about 8 lines of code in <code>app.js</code>. Now you should just be able to type:</p>
+
+<p><code>node app.js</code></p>
+
+<p>to start the server. Go to <em>localhost:3000/hello.txt</em> in your browser and you should see &ldquo;Hello World&rdquo;!</p>
+
+<p>You can define any route you&rsquo;d like here by changing the arguments passed to <code>app.get()</code>. (You can also define POST endpoints with <code>app.post()</code>.) The sample code sends a string response but you could easily pass in a view here as well.</p>
+
+<p><em>Pro tip:</em>
+<em>You can define a middleware function here that will get called every time the server receives a request. For example, checking the request for certain media types to redirect users if they visit your site on an iPad. <a href="http://expressjs.com/api#app.use">Just pass a function to <code>app.use()</code></a>.</em></p>
+
+<p>Congratulations! You&rsquo;ve officially set up a basic Node app that knows how to handle routes and display text passed in as strings! The rest of this guide will focus on setting up apps with more complicated functionality. Remember that every time you make a change to code, you must restart the server on the command line if you want to see the changes reflected in your browser.</p>
+
+<p><strong>OPTIONAL: Getting Started with a Templating Library (<a href="https://github.com/visionmedia/consolidate.js">Consolidate.js</a>)
+</strong></p>
+
+<p><em>Pro tip:
+At this point you might want to make a <code>.gitignore</code> file and add <code>node_modules</code> to it. Everybody developing on the codebase needs to <code>npm install</code> dependencies on their machines anyway, so there&rsquo;s no reason to check in these potentially huge files.</em></p>
+
+<p>If you&rsquo;re using this guide to set up an app with multiple views, you might want to consider using a templating library. <a href="https://github.com/visionmedia/consolidate.js">Consolidate.js</a> is a great tool that plugs into Express and allows you to select almost any templating utility. I arbitrarily chose to use Consolidate to set up <a href="http://documentcloud.github.io/underscore/">Underscore templating</a>, so my code samples will use that syntax.
+Make sure to:</p>
+
+<p> <code>npm install consolidate --save</code></p>
+
+<p>if you&rsquo;re following along. You also have to require consolidate at the top of <code>app.js</code>:</p>
+
+<p><code>var cons = require('consolidate');</code></p>
+
+<p>Once this is done, here&rsquo;s some sample code to get started using underscore with consolidate:</p>
+
+<p><img src="https://31.media.tumblr.com/abcb1d2cb5732eb22a1eef8c041e7f3b/tumblr_inline_nc2y90Z04f1si9gc8.png" alt="image" /></p>
+
+<p>The templating library is now expecting all of your views to live in a <code>views</code> directory, so make this folder.</p>
+
+<p>The sample route we&rsquo;ve defined is the index, so now create an <code>index.html</code> in your views directory. To make sure you&rsquo;ve set up underscore templating correctly, let&rsquo;s evaluate the variable it gave us. Type this in your <code>index.html</code>:</p>
+
+<p><code>&lt;%- title %&gt; </code></p>
+
+<p>Now if you start the server with <code>node app.js</code>, you should be able to go to <em>localhost:3000</em> and see this:</p>
+
+<p><img src="https://31.media.tumblr.com/1a1b433ec4301aa8d8b4ee2d58edd210/tumblr_inline_nc2yktWzrW1si9gc8.png" alt="image" /></p>
+
+<p>Hooray! Underscore has interpolated the title variable! Of course usually you&rsquo;d pass in a model here instead of cluttering up your <code>app.js</code> file with random variables.</p>
+
+<p><strong>OPTIONAL: Getting Started with <a href="http://nodemon.io/">Nodemon</a></strong></p>
+
+<p>At this point you&rsquo;re probably tired of restarting your server EVERY time you make a change in your code. Luckily, there&rsquo;s a better way. <a href="http://nodemon.io/">Nodemon</a> will watch for changes in your source code and and automatically restart the server for you, enabling lazy/efficient developers everywhere. It&rsquo;s similar to Shotgun in Ruby projects. Just run:</p>
+
+<p><code>npm install -g nodemon</code></p>
+
+<p>to install it globally. This means you can use it on future projects as well. Now you can just run:</p>
+
+<p><code>nodemon app.js</code></p>
+
+<p>once instead of</p>
+
+<p><code>node app.js</code></p>
+
+<p>many times. Note that you&rsquo;ll still have to refresh your browser to see changes, but your server will handle reloading for you. You won&rsquo;t see nodemon listed as a dependency for this project since you&rsquo;ve installed it globally.</p>
+
+<p><em>Pro tip:</em>
+<em>In case you&rsquo;ve lost track of our file structure, here&rsquo;s a screenshot of what it should look like at this point:</em></p>
+
+<p><img src="https://31.media.tumblr.com/d6716e83c02caac3b9505dce47f8beac/tumblr_inline_nc2zp822qq1si9gc8.png" alt="image" /></p>
+
+<p>And there you have it, folks! You&rsquo;re now well on your way to setting up an interesting, complicated Node.js project using the Express framework. The documentation is pretty good but the error messages are AWFUL (think something like &ldquo;generalized error&rdquo;!) so if you have any problems, feel free to message me at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#105;&#108;&#x61;&#x6e;&#x61;&#x2e;&#x73;&#x75;&#102;&#114;&#x69;&#110;&#64;&#x66;&#x6c;&#97;&#116;&#x69;&#x72;&#111;&#x6e;&#115;&#99;&#104;&#x6f;&#x6f;&#108;&#x2e;&#99;&#x6f;&#109;&#46;">&#x69;&#x6c;&#x61;&#110;&#97;&#x2e;&#115;&#x75;&#x66;&#x72;&#x69;&#110;&#64;&#102;&#108;&#x61;&#x74;&#105;&#x72;&#111;&#110;&#x73;&#99;&#x68;&#111;&#111;&#x6c;&#46;&#99;&#x6f;&#109;&#x2e;</a></p>
+
+			
+			
+		</div>
+	<footer>
+		
+
+
+		
+
+
+
+  
+		
+			Tagged under
+		
+    <a class='category' href='/blog/categories/apps/'>apps,</a>, <a class='category' href='/blog/categories/express/'>express,</a>, <a class='category' href='/blog/categories/framework/'>framework,</a>, <a class='category' href='/blog/categories/node-dot-js/'>node.js,</a>, <a class='category' href='/blog/categories/nodemon/'>nodemon,</a>, <a class='category' href='/blog/categories/underscore/'>underscore</a>
+	
+
+
+	
+	
+	</footer>
+	
+</article>
+<!-- END OF _includes/article.html -->
+
+	
+		
+		<!-- START OF _includes/article.html -->
+<article>
+	<header>
 		<h1><a href="/blog/2014/07/30/a-rails-grammar-lesson/">A Rails Grammar Lesson</a></h1>
 		<time>30 July 2014</time>
 	</header>
