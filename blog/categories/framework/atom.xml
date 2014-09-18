@@ -4,7 +4,7 @@
   <title><![CDATA[Category: framework, | Ilana's Blog]]></title>
   <link href="http://ilanasufrin.github.io/blog/categories/framework/atom.xml" rel="self"/>
   <link href="http://ilanasufrin.github.io/"/>
-  <updated>2014-09-18T01:38:40-04:00</updated>
+  <updated>2014-09-18T17:06:19-04:00</updated>
   <id>http://ilanasufrin.github.io/</id>
   <author>
     <name><![CDATA[Ilana Sufrin]]></name>
@@ -52,7 +52,7 @@
 <p><em>Pro tip:</em>
 <em>You can define a middleware function here that will get called every time the server receives a request. For example, checking the request for certain media types to redirect users if they visit your site on an iPad. <a href="http://expressjs.com/api#app.use">Just pass a function to <code>app.use()</code></a>.</em></p>
 
-<p>Congratulations! You&rsquo;ve officially set up a basic Node app that knows how to handle routes and display text passed in as strings! The rest of this guide will focus on setting up apps with more complicated functionality. Remember that every time you make a change to code, you must restart the server on the command line if you want to see the changes reflected in your browser.</p>
+<p>Congratulations! You&rsquo;ve officially set up a basic Node app that knows how to handle routes and display text passed in as strings! The rest of this guide will focus on setting up apps with more complicated functionality. Remember that every time you make a change to your code, you must restart the server on the command line if you want to see the changes reflected in your browser.</p>
 
 <p><strong>OPTIONAL: Getting Started with a Templating Library (<a href="https://github.com/visionmedia/consolidate.js">Consolidate.js</a>)
 </strong></p>
@@ -106,7 +106,7 @@ Make sure to:</p>
 
 <p><img src="https://31.media.tumblr.com/d6716e83c02caac3b9505dce47f8beac/tumblr_inline_nc2zp822qq1si9gc8.png" alt="image" /></p>
 
-<p>And there you have it, folks! You&rsquo;re now well on your way to setting up an interesting, complicated Node.js project using the Express framework. The documentation is pretty good but the error messages are AWFUL (think something like &ldquo;generalized error&rdquo;!) so if you have any problems, feel free to message me at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#105;&#x6c;&#x61;&#x6e;&#97;&#46;&#x73;&#117;&#102;&#114;&#x69;&#x6e;&#64;&#x66;&#108;&#97;&#116;&#x69;&#114;&#x6f;&#110;&#115;&#99;&#104;&#x6f;&#x6f;&#x6c;&#46;&#99;&#111;&#x6d;&#46;">&#105;&#x6c;&#97;&#110;&#x61;&#x2e;&#115;&#x75;&#102;&#x72;&#x69;&#110;&#64;&#x66;&#108;&#97;&#116;&#105;&#x72;&#111;&#110;&#115;&#99;&#x68;&#x6f;&#x6f;&#x6c;&#x2e;&#99;&#x6f;&#x6d;&#46;</a></p>
+<p>And there you have it, folks! You&rsquo;re now well on your way to setting up an interesting, complicated Node.js project using the Express framework. The documentation is pretty good but the error messages are AWFUL (think something like &ldquo;generalized error&rdquo;!) so if you have any problems, feel free to message me at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#105;&#108;&#x61;&#x6e;&#97;&#x2e;&#x73;&#x75;&#x66;&#x72;&#105;&#x6e;&#64;&#102;&#108;&#97;&#116;&#x69;&#x72;&#x6f;&#x6e;&#x73;&#99;&#104;&#111;&#x6f;&#x6c;&#x2e;&#99;&#x6f;&#x6d;&#46;">&#x69;&#x6c;&#x61;&#110;&#97;&#46;&#x73;&#x75;&#x66;&#114;&#x69;&#x6e;&#64;&#x66;&#x6c;&#97;&#116;&#105;&#114;&#111;&#110;&#115;&#99;&#104;&#x6f;&#x6f;&#108;&#x2e;&#x63;&#x6f;&#x6d;&#46;</a></p>
 ]]></content>
   </entry>
   
